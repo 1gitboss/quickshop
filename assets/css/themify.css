@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'themify';
+	src: url(../../assets/fonts/themify-3027531531d2dfb899fa033712581c65.eot?h=761ecc1989aa1eef65e85129b5ce13a0) format('embedded-opentype'),
+	url(../../assets/fonts/themify-3027531531d2dfb899fa033712581c65.eot?h=761ecc1989aa1eef65e85129b5ce13a0) format('embedded-opentype'),
+	url(../../assets/fonts/themify-a744416b6d18820f65c8bda7daed9593.woff?h=761ecc1989aa1eef65e85129b5ce13a0) format('woff'),
+	url(../../assets/fonts/themify-cc9a33a294928505bbb6da5df81eda51.ttf?h=761ecc1989aa1eef65e85129b5ce13a0) format('truetype'),
+	url(../../assets/fonts/themify-b07b4625a862c87d46be3195ffbb32b4.svg?h=761ecc1989aa1eef65e85129b5ce13a0) format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}
