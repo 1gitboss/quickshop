@@ -5,8 +5,12 @@ const closeModalBtn = document.getElementById('closeModalBtn');
 const brandForm = document.getElementById('brandForm');
 const brandTableBody = document.querySelector('#brandTable tbody');
 
+if (addBrandBtn) {
 addBrandBtn.onclick = function() {
     brandModal.style.display = 'block';
+}
+} else {
+    console.error("addBrandBtn element not found.");
 }
 
 closeModalBtn.onclick = function() {
