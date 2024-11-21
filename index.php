@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Activity</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../ecommerce-lab/css/style.css">
+    <link rel="stylesheet" href="../quickshop/css/style.css">
 
 </head>
 
@@ -15,8 +15,8 @@
     <?php
     echo "<h1>Welcome to my E-commerce Lab</h1>";
     ?>
-    <button id="signup" type="button" onclick="window.location.href='../ecommerce-lab/view/signup.php'">Sign up</button>
-    <button id="login" type="button" onclick="window.location.href='../ecommerce-lab/view/login.php'">Log In</button>
+<!--    <button id="signup" type="button" onclick="window.location.href='../quickshop/view/signup.php'">Sign up</button>-->
+    <button id="login" type="button" onclick="window.location.href='../quickshop/view/login.php'">Log In / Sign Up</button>
 </body>
 
 </html>
