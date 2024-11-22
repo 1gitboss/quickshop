@@ -8,10 +8,3 @@ Pass: @Test123
 
 
 
-TODO  
-[ ] clean up project directory  
-- remove signup
-- remove  
-
-[ ] add sidebar for admin  
-[ ] complete the payment lab
