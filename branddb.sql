@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2024 at 12:57 AM
+-- Generation Time: Nov 22, 2024 at 12:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,8 @@ CREATE TABLE `brands` (
 
 INSERT INTO `brands` (`brand_id`, `brand_name`) VALUES
 (1, 'Samsung'),
-(2, 'Gucci');
+(2, 'Gucci'),
+(4, 'Ferrari');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,8 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`p_id`, `ip_add`, `c_id`, `qty`) VALUES
 (4, 0, 1, 1),
 (3, 0, 1, 1),
-(3, 0, 1, 1);
+(3, 0, 1, 1),
+(9, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -103,7 +105,9 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_image`, `user_role`) VALUES
-(1, 'John', 'anatsuie@ashesi.edu.gh', '$2y$10$l3PzIExz4A2.68sAzjMG8uj8fL922eMbEXJKpU70sFUzpaZzkY33e', 'Ghana', 'Accra', '123456789', NULL, 1);
+(1, 'John', 'anatsuie@ashesi.edu.gh', '$2y$10$l3PzIExz4A2.68sAzjMG8uj8fL922eMbEXJKpU70sFUzpaZzkY33e', 'Ghana', 'Accra', '123456789', NULL, 1),
+(2, 'John', 'admin@ashesi.edu.gh', '$2y$10$2djdr1OnvXD08bqxTn3TdO2zBS.WmTLdeszIixJ22WqW5LVymRbkS', 'Ghana', 'Accra', '123456', NULL, 2),
+(3, 'Edem', 'edem@gmail.com', '$2y$10$2e/AjTA4buljtQGa.RQ02.Vn13EYO84YiotVU.8N8noPyjOxX7T62', 'Ghana', 'Accra', '123456', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -271,7 +275,7 @@ ALTER TABLE `userrole`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -283,7 +287,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `orders`
