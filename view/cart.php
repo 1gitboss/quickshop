@@ -42,20 +42,13 @@ $cartTotal = 0;
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-5">
-                        <div class="top-left">
-                            <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                                <li><i class="ti-email"></i> support@shophub.com</li>
-                            </ul>
-                        </div>
+
                     </div>
                     <div class="col-12 col-md-12 col-lg-7">
                         <div class="right-content">
                             <ul class="list-main">
-                                <li><i class="ti-location-pin"></i> Store location</li>
-                                <li><i class="ti-alarm-clock"></i><a href="#">Daily deal</a></li>
                                 <li><i class="ti-user"></i><a href="#">My account</a></li>
-                                <li><i class="ti-power-off"></i><a href="login.php">Login</a></li>
+                                <li><i class="ti-power-off"></i><a href="../actions/logout.php">Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,9 +82,8 @@ $cartTotal = 0;
                     </div>
                     <div class="col-12 col-md-3 col-lg-2">
                         <div class="right-bar">
-                            <div class="sinlge-bar"><a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             <div class="sinlge-bar"><a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></div>
-                            <div class="sinlge-bar shopping"><a href="#" class="single-icon"><i class="ti-bag"></i></a>
+                            <div class="sinlge-bar shopping"><a href="cart.php" class="single-icon"><i class="ti-bag"></i></a>
 
                         </div>
                     </div>
@@ -108,21 +100,17 @@ $cartTotal = 0;
                                     <div class="navbar-collapse">
                                         <div class="nav-inner">
                                             <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="#">Home</a></li>
+                                                <li class="active"><a href="shop.php">Home</a></li>
                                                 <li><a href="#">Product</a></li>
                                                 <li><a href="#">Service</a></li>
                                                 <li><a href="#">Shop</a><i class="ti-angle-down"></i><span class="new">New</span>
                                                     <ul class="dropdown">
                                                         <li><a href="cart.php">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="checkout.php">Checkout</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Pages</a></li>
-                                                <li><a href="#">Blog</a><i class="ti-angle-down"></i>
-                                                    <ul class="dropdown">
-                                                        <li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
-                                                    </ul>
-                                                </li>
+
                                                 <li><a href="contact.html">Contact Us</a></li>
                                             </ul>
                                         </div>
@@ -186,7 +174,7 @@ $cartTotal = 0;
                                     </td>
                                     <td class='qty' data-title='Qty'>
                                         <form method='post' action='../actions/update_cart_action.php' class='d-inline'>
-                                            <input type='hidden' name='product_id' value='{$item['product_id']}'>
+                                            <input type='hidden' name='product_id' value='{$item['p_id']}'>
                                             <div class='input-group'>
                                                 <input class='input-number' data-max='100' data-min='1' name='quantity' type='number' value='{$item['qty']}' min='1'>
                                                 <button type='submit' class='btn btn-primary'>Update</button>
@@ -198,7 +186,7 @@ $cartTotal = 0;
                                     </td>
                                     <td class='action' data-title='Remove'>
                                         <form method='post' action='../actions/delete_cart_item_action.php' class='d-inline'>
-                                            <input type='hidden' name='product_id' value='{$item['product_id']}'>
+                                            <input type='hidden' name='product_id' value='{$item['p_id']}'>
                                             <button type='submit' class='btn btn-danger'><i class='ti-trash remove-icon'></i></button>
                                         </form>
                                     </td>
@@ -224,19 +212,7 @@ $cartTotal = 0;
                     <div class="total-amount">
                         <div class="row">
                             <div class="col-12 col-md-5 col-lg-8">
-                                <div class="left">
-                                    <div class="coupon">
-                                        <form action="#" target="_blank">
-                                            <input name="Coupon" placeholder="Enter Your Coupon">
-                                            <button class="btn">Apply</button>
-                                        </form>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label class="checkbox-inline" for="2">
-                                            <input type="checkbox" id="2" name="news"> Shipping (+10$)
-                                        </label>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="col-12 col-md-7 col-lg-4">
                                 <div class="right">
@@ -246,8 +222,8 @@ $cartTotal = 0;
                                         <li class="last">You Pay<span>$<?php echo $cartTotal; ?></span></li>
                                     </ul>
                                     <div class="button5">
-                                        <a class="btn" role="button" href="#">Checkout</a>
-                                        <a class="btn" role="button" href="products.php">Continue shopping</a>
+                                        <a class="btn" role="button" href="checkout.php">Checkout</a>
+                                        <a class="btn" role="button" href="shop.php">Continue shopping</a>
                                     </div>
                                 </div>
                             </div>

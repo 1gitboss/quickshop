@@ -79,6 +79,15 @@ $products = view_products_ctr();
                                 <form><input type="search" name="search" placeholder="Search Products Here....."><button class="btnn"><i class="ti-search"></i></button></form>
                             </div>
                         </div>
+
+                        </div>
+                    <div class="col-12 col-md-3 col-lg-2">
+                            <div class="right-bar">
+                                <div class="sinlge-bar"><a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></div>
+                                <div class="sinlge-bar shopping"><a href="cart.php" class="single-icon"><i class="ti-bag"></i></a>
+
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
