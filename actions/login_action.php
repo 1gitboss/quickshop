@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_email'] = $user['customer_email'];
             $_SESSION['user_name'] = $user['customer_name'];
 
-            // header("Location: ../view/dashboard.php");
-           
+            // header("Location: ../view/dashboard.php");           
             
         
 
@@ -37,6 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     exit();
                 case '2':
                     header("Location: ../view/manage_brand.php");
+                    exit();
+                case '3':
+                    header("Location: ../view/manage_brand.php");
+                    exit();
+                case '4':
+                    header("Location: ../view/view_orders.php");
                     exit();
                 default:
                     header("Location: ../login.php?error=role_not_recognized");
