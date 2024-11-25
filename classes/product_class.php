@@ -44,5 +44,27 @@ class Product extends db_connection {
                 LEFT JOIN `categories` c ON p.product_cat = c.cat_id";
         return $this->db_fetch_all($sql);
     }
+
+    public function update_product($product_id, $product_title, $product_price, $product_desc, $product_cat, $product_brand, $product_keywords, $product_image) {
+        $sql = "UPDATE products SET 
+                product_title = '$product_title', 
+                product_price = '$product_price', 
+                product_desc = '$product_desc', 
+                product_cat = '$product_cat', 
+                product_brand = '$product_brand', 
+                product_keywords = '$product_keywords'
+            WHERE product_id = '$product_id'";
+
+        return $this->db_query($sql); // Assuming `db_query` executes the SQL query
+    }
+
+    public function get_single_product($product_id) {
+        $sql = "SELECT * FROM products WHERE product_id = '$product_id'";
+
+
+        return $this->db_fetch_one($sql); // Fetch one row using a database helper method
+    }
 }
+
+
 ?>

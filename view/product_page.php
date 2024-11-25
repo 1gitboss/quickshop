@@ -43,9 +43,16 @@ $products = view_products_ctr();
                 echo "<td>" . $product['brand_name'] . "</td>";  // Joining the brand table
                 echo "<td>" . $product['cat_name'] . "</td>";  // Joining the category table
                 echo "<td>
-                    <form method='post' action='../actions/delete_product_action.php'>
+                    <!-- Update Button -->
+                    <form method='get' action='../actions/update_product_page.php' style='display: inline-block;'>
                         <input type='hidden' name='product_id' value='" . $product['product_id'] . "' />
-                        <button type='submit'>Delete</button>
+                        <button type='submit'>Update</button>
+                    </form>
+        
+                    <!-- Delete Button -->
+                    <form method='post' action='../actions/delete_product_action.php' style='display: inline-block;'>
+                        <input type='hidden' name='product_id' value='" . $product['product_id'] . "' />
+                        <button type='submit' onclick=\"return confirm('Are you sure you want to delete this product?');\">Delete</button>
                     </form>
                 </td>";
                 echo "</tr>";

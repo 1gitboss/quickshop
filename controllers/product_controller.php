@@ -22,4 +22,18 @@ function view_products_ctr() {
     $product = new Product();
     return $product->getProducts();
 }
+
+function update_product_ctr($product_id, $product_title, $product_price, $product_desc, $product_cat, $product_brand, $product_keywords, $product_image) {
+    $product = new Product(); // Assuming a Product class exists for managing product data
+
+    // Call a method in the model class to perform the update
+    return $product->update_product($product_id, $product_title, $product_price, $product_desc, $product_cat, $product_brand, $product_keywords, $product_image);
+}
+
+function get_single_product_ctr($product_id) {
+    $product = new Product(); // Assuming you have a Product class for the model
+    return $product->get_single_product($product_id); // Call the model function
+}
+
+
 ?>
