@@ -18,6 +18,31 @@ function loginUser_ctr($email, $password) {
     return $result;
 }
 
+function show_all_users_ctr(){
+    $users = new customer_class();
+
+    return $users-> show_all_users();
+
+}
+function update_user_role_ctr($customer_id, $new_role) {
+    $db = new db_connection();
+    $sql = "UPDATE customer SET user_role = '$new_role' WHERE customer_id = '$customer_id'";
+    return $db->db_query($sql);
+}
+
+function delete_user_ctr($customer_id) {
+    $db = new db_connection();
+    $sql = "DELETE FROM `customer` WHERE customer_id = '$customer_id'";
+    return $db->db_query($sql);
+}
+
+function get_all_roles_ctr() {
+    $db = new db_connection();
+    $sql = "SELECT * FROM userrole";
+    return $db->db_fetch_all($sql);
+}
+
+?>
 
 
 

@@ -43,7 +43,7 @@ include 'orders_fxn.php';
         }
 
         th:first-child {
-            width: 25; 
+            width: 25%;
         }
 
         th:nth-child(2) {
@@ -63,13 +63,7 @@ include 'orders_fxn.php';
 </head>
 <body>
     <div class="panel panel-default">
-    <div class="container p-5 my-5 bg-dark text-white">
-        <div class="row justify-content-between">
-            <div class="col-auto">
-                <a class="btn btn-success" href="view_products.php" style="color:White">Back</a>
-            </div>
-        </div>
-    </div>
+
     </div>
     <div class="container p-2 my-2 border">
     <table style="font-family:Times New Roman, san-serif;">

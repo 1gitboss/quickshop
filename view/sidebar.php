@@ -19,7 +19,7 @@
         
 	<ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home"></span> M. Users</a>
+            <a href="manage_users.php"><span class="fa fa-home"></span> M. Users</a>
           </li>
           <li>
             <a href="product_page.php"><span class="fa fa-shopping-cart"></span> M. Products</a>
@@ -27,7 +27,7 @@
           <li>
             <a href="manage_brand.php"><span class="fa fa-cogs"></span> M. Brands</a>
           </li>
-        
+
         <li>
             <a  href="view_orders.php"><span class="fa fa-tag"></span>Orders</a>
           </li>

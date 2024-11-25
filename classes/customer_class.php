@@ -63,6 +63,19 @@ class customer_class extends db_connection
             return false;
         }
     }
+
+    public function show_all_users(){
+        $ndb = new db_connection();
+        $sql = "SELECT * FROM `customer` JOIN branddb.userrole u on u.roleId = customer.user_role";
+        $result = $this->db_fetch_all($sql);
+        if (!$result) {
+            echo "Error: " . mysqli_error($ndb->db_conn());
+            return false;
+
+        } else {
+            return $result;
+        }
+    }
     
 }
 
