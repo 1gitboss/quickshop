@@ -1,7 +1,7 @@
 <?php
 include ("sidebar.php");
 //require('../settings/db_cred.php');
-include '../functions/product_fxn.php';
+include 'product_fxn.php';
 ?>
 
 
