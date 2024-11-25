@@ -2,10 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #FF416C;
-    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
-    color: #FFFFFF;
+    background: #ffffff;
+    /*background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);*/
+    /*background: linear-gradient(to right, #FF4B2B, #FF416C);*/
+    color: #000000;
 }
 h1 {
     text-align: center;
@@ -33,15 +33,16 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white for header */
+    background-color: #f8951f;
+    color: white;
 }
 #addProductBtn{
    background: #4caf50;
 }
 button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
+    border: 1px solid ;
+    background-color: #F7941D;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;

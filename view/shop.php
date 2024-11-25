@@ -1,7 +1,7 @@
 <?php
 include("../controllers/product_controller.php");
 
-// Fetch all brands
+// Fetch all produucts
 $products = view_products_ctr();
 
 ?>
