@@ -45,4 +45,30 @@ function set_user_email($user_email) {
     $_SESSION['user_email'] = $user_email;
 }
 
+function authorize(){
+    if (!isset($_SESSION['user_role'])){
+        return false;
+    }
+    //role 1 is the customer
+    else if($_SESSION['user_role']==1){
+        header('Location: ../view/homepage.php');
+        exit();
+    }
+    //role 3 is the sales personnel
+    else if($_SESSION['user_role']==3){
+        header('Location: ../view/homepage.php');
+        exit();
+    }
+    //role 4 is the inv. manager
+    else if($_SESSION['user_role']==4){
+        header('Location: ../view/homepage.php');
+        exit();
+    }
+
+    else{
+        header('Location: ../admin/homepage.php');
+    }
+    return $_SESSION['user_role'] ;
+}
+
 ?>
