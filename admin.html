@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Admin Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #004a8f;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: #005bb5;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #fff;
+        }
+
+        .content-section {
+            display: none; /* Initially hide all sections */
+        }
+
+        .content-section.active {
+            display: block; /* Display the active section */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #004a8f;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .header button {
+            background: #ffcc00;
+            color: #004a8f;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .header button:hover {
+            background: #ffd633;
+        }
+
+        /* Table Style for Data */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #004a8f;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#" data-target="overview-section" class="menu-item active">Overview</a></li>
+                <li><a href="#" data-target="manage-users-section" class="menu-item">Manage Users</a></li>
+                <li><a href="#" data-target="reports-section" class="menu-item">Reports</a></li>
+                <li><a href="#" data-target="settings-section" class="menu-item">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome, Admin</h1>
+                <button id="logoutButton">Logout</button>
+            </header>
+
+            <!-- Overview Section -->
+            <section id="overview-section" class="content-section active">
+                <h2>Overview</h2>
+                <p>Here you can find a quick summary of the platform's performance.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Users</td>
+                            <td>1,230</td>
+                        </tr>
+                        <tr>
+                            <td>Active Sessions</td>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <td>New Signups</td>
+                            <td>52</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Manage Users Section -->
+            <section id="manage-users-section" class="content-section">
+                <h2>Manage Users</h2>
+                <p>View, edit, or delete user accounts from this section.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@example.com</td>
+                            <td><button>Edit</button> <button>Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>John Smith</td>
+                            <td>john.smith@example.com</td>
+                            <td><button>Edit</button> <button>Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports-section" class="content-section">
+                <h2>Reports</h2>
+                <p>Analyze performance and generate reports for better insights.</p>
+                <ul>
+                    <li><strong>Daily Reports:</strong> Summary of daily activities.</li>
+                    <li><strong>Monthly Reports:</strong> Overview of the month's performance.</li>
+                    <li><strong>Custom Reports:</strong> Generate reports based on custom filters.</li>
+                </ul>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="content-section">
+                <h2>Settings</h2>
+                <p>Customize the application settings to suit your preferences.</p>
+                <ul>
+                    <li><strong>Account Settings:</strong> Update your email, password, and profile details.</li>
+                    <li><strong>Notification Settings:</strong> Manage your notification preferences.</li>
+                    <li><strong>System Settings:</strong> Configure application-level settings.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Get all menu items and content sections
+        const menuItems = document.querySelectorAll('.menu-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Function to handle menu clicks
+        const handleMenuClick = (e) => {
+            e.preventDefault();
+
+            // Remove active class from all menu items and sections
+            menuItems.forEach(item => item.classList.remove('active'));
+            contentSections.forEach(section => section.classList.remove('active'));
+
+            // Add active class to clicked menu item
+            const target = e.target.getAttribute('data-target');
+            e.target.classList.add('active');
+
+            // Display the corresponding section
+            document.getElementById(target).classList.add('active');
+        };
+
+        // Attach click event listeners to each menu item
+        menuItems.forEach(item => {
+            item.addEventListener('click', handleMenuClick);
+        });
+
+        // Logout button functionality
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            alert("Logging out...");
+            window.location.href = "/login";
+        });
+    </script>
+</body>
+</html>
