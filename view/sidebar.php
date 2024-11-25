@@ -16,7 +16,8 @@
 			<nav id="sidebar" class="active">
 				<h1><a href="#" class="logo">Q.
                         shop</a></h1>
-        <ul class="list-unstyled components mb-5">
+        
+	<ul class="list-unstyled components mb-5">
           <li class="active">
             <a href="#"><span class="fa fa-home"></span> Home</a>
           </li>
@@ -27,13 +28,16 @@
             <a href="manage_brand.php"><span class="fa fa-cogs"></span> M. Brands</a>
           </li>
 
+	  <li>
+            <a href="view_products.php"><span class="fa fa-eye"></span> View</a>
+          </li>
+
           <br/><br/>
           <li>
             <a href="../actions/logout.php"><span class="fa fa-user"></span> Logout </a>
           </li>
 
         </ul>
-
     	</nav>
 
         <!-- Page Content  -->
