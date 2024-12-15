@@ -1,8 +1,13 @@
 <?php
+//session_start();
+include ('../actions/authorize.php');
 include("../controllers/brand_controller.php");
 include ("sidebar.php");
-
+//check_access(2);
+for_personnel();
 // Fetch all brands
+var_dump($_SESSION['user_role']);
+var_dump($_SESSION['user_name']);
 $brands = view_brands_ctr();
 ?>
 <!DOCTYPE html>

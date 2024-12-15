@@ -1,4 +1,6 @@
 <?php
+include ('../actions/authorize.php');
+check_access(2);
 // Include necessary files and controllers
 include("../controllers/customer_controller.php");
 include("sidebar.php"); // Assuming you have a sidebar for admin navigation

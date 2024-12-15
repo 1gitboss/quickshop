@@ -1,4 +1,5 @@
 <?php
+include ('../actions/authorize.php');
 include("../controllers/product_controller.php");
 include ("sidebar.php");
 
@@ -42,19 +43,30 @@ $products = view_products_ctr();
 
                 echo "<td>" . $product['brand_name'] . "</td>";  // Joining the brand table
                 echo "<td>" . $product['cat_name'] . "</td>";  // Joining the category table
-                echo "<td>
-                    <!-- Update Button -->
-                    <form method='get' action='../actions/update_product_page.php' style='display: inline-block;'>
+                echo "<td>";
+//                    <!-- Update Button -->
+                     if (can_access_action([2,4])){
+                         echo "<form method='get' action='../actions/update_product_page.php' style='display: inline-block;'>
                         <input type='hidden' name='product_id' value='" . $product['product_id'] . "' />
                         <button type='submit'>Update</button>
-                    </form>
-        
-                    <!-- Delete Button -->
-                    <form method='post' action='../actions/delete_product_action.php' style='display: inline-block;'>
+                    </form>";
+
+//                         <!-- Delete Button -->
+                         echo "<form method='post' action='../actions/delete_product_action.php' style='display: inline-block;'>
                         <input type='hidden' name='product_id' value='" . $product['product_id'] . "' />
                         <button type='submit' onclick=\"return confirm('Are you sure you want to delete this product?');\">Delete</button>
-                    </form>
-                </td>";
+                    </form>";
+
+                     }
+                     else{
+                         echo "<button disabled>Update (Access Denied) </button>";
+                         echo "<button disabled>Delete (Access Denied) </button>";
+                     }
+
+        
+
+
+                echo "</td>";
                 echo "</tr>";
             }
         } else {

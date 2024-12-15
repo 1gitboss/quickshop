@@ -48,7 +48,7 @@ $products = view_products_ctr();
                         <div class="right-content">
                             <ul class="list-main">
                                 <li><i class="ti-user"></i><a href="#">My account</a></li>
-                                <li><i class="ti-power-off"></i><a href="login.php">Log Out</a></li>
+                                <li><i class="ti-power-off"></i><a href="../actions/logout.php">Log Out</a></li>
                             </ul>
                         </div>
                     </div>
